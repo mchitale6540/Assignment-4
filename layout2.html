@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 4 - Layout 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+      background: #fff;
+      color: #111;
+    }
+
+    .nav { margin-top: 11px; }
+    .wrap {
+      width: 960px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;  
+      grid-template-columns: 240px 1fr;
+      grid-template-areas:
+        "header header"   
+        "h1 h1"
+        "sub sub"
+        "gallery gallery"
+        "footer footer";
+    }
+
+   
+    .header {
+      grid-area: header;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      column-gap: 240px; 
+      align-items: start;
+    }
+
+    .box { background:#c7c7c7; border-radius:2px; padding:10px 12px; }
+
+
+    .logo { min-height:70px; }
+
+    .nav { min-height:50px; display:grid; align-content:center; padding:8px 10px; }
+    .menu { display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; }
+    .menu div { background:#c7c7c7; text-align:center; padding:8px 0; border-radius:2px; font-size:14px; }
+
+    
+    .h1 { grid-area: h1; background:none; padding:0; }
+    .h1 h1 { margin:0; font-size:45px; line-height:1.1; }
+    .sub { grid-area: sub; background:none; padding:0; }
+    .sub p { margin:0; font-weight:600; font-size:24px; }
+
+  
+    .gallery { grid-area: gallery; display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; }
+    .tile { background:#c7c7c7; min-height:170px; padding:10px 12px; border-radius:2px; }
+
+    
+    .footer { grid-area: footer; min-height:60px; display:flex; align-items:center; justify-content:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    
+    <div class="header">
+      <div class="box logo">Company Logo</div>
+      <div class="box nav">
+        <div class="menu">
+          <div>Item 1</div><div>Item 2</div><div>Item 3</div><div>Item 4</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="h1">
+      <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro ei.</h1>
+    </div>
+
+    <div class="sub">
+      <p>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="tile"></div><div class="tile"></div><div class="tile"></div>
+      <div class="tile"></div><div class="tile"></div><div class="tile"></div>
+      <div class="tile"></div><div class="tile"></div><div class="tile"></div>
+    </div>
+
+    <div class="box footer">Copyright Notice</div>
+  </div>
+</body>
+</html>
